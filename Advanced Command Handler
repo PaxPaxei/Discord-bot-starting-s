@@ -1,0 +1,26 @@
+under prefix  type 
+
+client.commands = new Discord.Collection();
+ 
+const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
+for(const file of commandFiles){
+    const command = require(`./commands/${file}`);
+ 
+    client.commands.set(command.name, command);
+}
+
+
+Then make a folder called commands and make a file in it called ping.js        
+Delete the sentance  message.channel.send('pong!');   and replace it with  client.commands.get('ping').execute(message, args);   
+
+Now inside the ping.js file type 
+
+module.exports = {
+    name: 'ping',
+    description: "this is a ping command!",
+    execute(message, args){
+        message.channel.send('pong!');
+    }
+}
+
+Restart the bot and that's advanced handler!        
