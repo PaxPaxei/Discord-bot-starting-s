@@ -1,2 +1,3 @@
-# Discord-bot-starting-s
-These are some stuff you will need to start your discord bot!
+This is what you want for your bot to activate       
+
+If you have any problems with code add me on discord PaxPaxei#2506
